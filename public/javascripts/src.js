@@ -75,7 +75,7 @@ function onReady() {
         let emoji = new PIXI.Sprite(emos[~~(Math.random() * emos.length)]);
         emoji.x = Math.random() * innerWidth;
         emoji.y = Math.random() * innerHeight;
-        emoji.scale.set(.5);
+        emoji.scale.set(1.5);
         emoji.rotation = Math.random() * 2 * Math.PI;
         emoji.angle = Math.random() * 2 * Math.PI;
         emoji.anchor.set(.5);
