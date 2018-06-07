@@ -1,9 +1,5 @@
 window.onresize = resize;
-var gui = new dat.GUI();
-let size = { scale: 1 };
-let _filter = { rotation: 0, distance: 5, alpha: .5 }
-gui.add(_filter, 'rotation', 0, 360);
-gui.add(size, "scale", 0.25, 2.5);
+
 let opts = {
         transparent: true,
         resolution: 1,
@@ -62,8 +58,7 @@ for (var i = 0; i < 1000; i++) {
     container.addChild(a)
 }
 app.ticker.add(() => {
-    filter.seed = Math.random();
-    filter2.rotation = _filter.rotation;
+
     if (isAdding) {
         for (var i = 0; i < 10; i++) {
             container.addChild(new mover(emos[~~(Math.random() * emos.length)], eventPos.x, eventPos.y));
@@ -72,7 +67,6 @@ app.ticker.add(() => {
     for (var i = 0, len = container.children.length; i < len; i++) {
         container.children[i].move();
         container.children[i].hitCheck();
-        container.children[i].scale.set(size.scale);
     }
     $("#fps").text(~~app.ticker.FPS);
     $("#count").text(container.children.length);
