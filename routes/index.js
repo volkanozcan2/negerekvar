@@ -9,7 +9,7 @@ router.get('/', function(req, res, next) {
 router.post('/', function(req, res, next) {
     var num = parseInt(req.body.num);
     var str = num + " is";
-    str += (isprime.isPrime(num) == true) ? " a prime " : " not a prime ";
+    str += (isprime.isPrime(num) == true) ? " a prime \n" : " not a prime \n";
     res.send(str);
 });
 module.exports = router;
