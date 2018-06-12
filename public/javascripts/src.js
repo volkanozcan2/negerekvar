@@ -31,13 +31,13 @@ app.stage.buttonMode = true;
 app.stage.addChild(container);
 app.stage.hitArea = new PIXI.Rectangle(0, 0, app.renderer.width, app.renderer.height);
 app.stage.on('pointerdown', (event) => {
-    isAdding = !isAdding;
+    isAdding = true;
 });
 app.stage.on('pointerup', (event) => {
-    isAdding = !isAdding;
+    isAdding = false;
 });
 app.stage.on('pointerupoutside', (event) => {
-    isAdding = !isAdding;
+    isAdding = false;
 });
 app.stage.on('pointermove', (event) => {
     eventPos.x = event.data.global.x;
