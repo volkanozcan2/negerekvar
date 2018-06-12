@@ -3,7 +3,7 @@ $(document).ready(function() {
         let t = $("textarea").val();
         $.ajax({
             type: "POST",
-            url: "http://localhost:8080",
+            url: "https://negerekvar.tk",
             data: { num: t },
             success: (dat) => { console.log("success " + dat) }
         });
