@@ -1,2 +1,4 @@
 comments
 *.swp
+.gitignore
+node_modules
